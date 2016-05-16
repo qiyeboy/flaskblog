@@ -18,3 +18,8 @@ template_folder='templates')
 本例子十分简单，不适合使用蓝图，如果有大型的应用的话，建议使用蓝图。如果只是中小型的应用话，可以参考这个结构: https://github.com/sixu05202004/autotest
 
 另一个是： https://github.com/sixu05202004/newsmeme
+
+
+apt-get install libmysqlclient-dev
+
+pip install mysql-python
