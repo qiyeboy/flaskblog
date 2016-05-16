@@ -16,7 +16,7 @@ from myapp import app
 from model import db
 
 manager = Manager(app)
-manager.add_command("runserver", Server('123.206.29.104', port=5000))
+manager.add_command("runserver", Server('10.141.3.86', port=5000))
 
 
 @manager.command
