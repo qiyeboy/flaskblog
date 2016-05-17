@@ -23,3 +23,6 @@ template_folder='templates')
 apt-get install libmysqlclient-dev
 
 pip install mysql-python
+设置数据库:
+character_set_server=utf8
+init_connect='SET NAMES utf8'
