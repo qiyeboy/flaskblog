@@ -1,0 +1,13 @@
+#nginx配置文件
+server {
+      listen  80;
+      server_name 120.27.122.125; #公网地址
+
+      location / {
+        include      uwsgi_params;
+        uwsgi_pass   127.0.0.1:5001;  # 指向uwsgi 所应用的内部地址,所有请求将转发给uwsgi 处理
+        uwsgi_param UWSGI_PYHOME /root/qiyeblog/qiyeblog_ENV/; # 指向虚拟环境目录
+        uwsgi_param UWSGI_CHDIR  /root/qiyeblog/www/flaskblog/; # 指向网站根目录
+        uwsgi_param UWSGI_SCRIPT manager:app; # 指定启动程序
+      }
+    }
